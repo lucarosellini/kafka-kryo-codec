@@ -6,8 +6,12 @@ import java.lang.reflect.Type;
 
 import com.esotericsoftware.kryo.Kryo;
 import com.esotericsoftware.kryo.io.Output;
+import kafka.utils.VerifiableProperties;
 
 public class KryoEncoder<T> extends Kryo implements kafka.serializer.Encoder<T> {
+
+    public KryoEncoder(VerifiableProperties props){
+    }
 
 	@SuppressWarnings("unchecked")
 	public KryoEncoder() {

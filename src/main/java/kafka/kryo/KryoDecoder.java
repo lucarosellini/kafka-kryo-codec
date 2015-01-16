@@ -9,8 +9,12 @@ import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
 
 import kafka.kryo.example.Person;
+import kafka.utils.VerifiableProperties;
 
 public class KryoDecoder<T> extends Kryo implements kafka.serializer.Decoder<T> {
+
+    public KryoDecoder(VerifiableProperties props){
+    }
 
 	@SuppressWarnings("unchecked")
 	public KryoDecoder() {
