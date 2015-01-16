@@ -1,0 +1,23 @@
+package kafka.kryo.bson;
+
+import com.mongodb.DBObject;
+import kafka.kryo.KryoDecoder;
+import kafka.utils.VerifiableProperties;
+import org.bson.BSONObject;
+
+/**
+ * Created by luca on 6/11/14.
+ */
+public class BSONObjectKryoDecoder extends KryoDecoder<BSONObject>{
+    public BSONObjectKryoDecoder(VerifiableProperties props) {
+        super(props);
+    }
+
+    public BSONObjectKryoDecoder() {
+    }
+
+    @Override
+    public BSONObject fromBytes(byte[] serializedDoc) {
+        return super.fromBytes(serializedDoc);
+    }
+}
