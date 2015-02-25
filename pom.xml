@@ -1,17 +1,44 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>es.care.sf.business</groupId>
+	<groupId>com.github.lucarosellini</groupId>
 	<artifactId>kafka.kryo.codec</artifactId>
-	<version>1.0.5</version>
+	<version>1.0.6</version>
 	<name>kafka.kryo.codec</name>
 	<description>kafka.kryo.codec</description>
 
-	<url>http://maven.apache.org</url>
+	<url>https://github.com/lucarosellini/kafka-kryo-codec</url>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
+
+	<developers>
+        <developer>
+            <id>lucarosellini</id>
+            <name>Luca Rosellini</name>
+            <email>luca.rosellini@gmail.com</email>
+            <roles>
+                <role>architect</role>
+                <role>developer</role>
+                <role>maintainer</role>
+            </roles>
+        </developer>
+    </developers>
+
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <scm>
+        <connection>scm:git:git@github.com:lucarosellini/kafka-kryo-codec.git</connection>
+        <developerConnection>scm:git:git@github.com:lucarosellini/kafka-kryo-codec.git</developerConnection>
+        <url>https://github.com/lucarosellini/kafka-kryo-codec</url>
+    </scm>
 
     <repositories>
         <repository>
@@ -92,14 +119,30 @@
                     </execution>
                 </executions>
             </plugin>
+            <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-gpg-plugin</artifactId>
+            <executions>
+              <execution>
+                <id>sign-artifacts</id>
+                <phase>verify</phase>
+                <goals>
+                  <goal>sign</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
 		</plugins>
 	</build>
 
-    <distributionManagement>
-        <repository>
-            <id>artifactory</id>
-            <name>Enterprise Artifactory</name>
-            <url>http://fintonicdev2.cloudapp.net:8081/artifactory/libs-release-local</url>
-        </repository>
-    </distributionManagement>
+	<distributionManagement>
+	<repository>
+		<id>sonatype-nexus-staging</id>
+		<url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
+	</repository>
+	<snapshotRepository>
+		<id>sonatype-nexus-snapshots</id>
+		<url>https://oss.sonatype.org/content/repositories/snapshots</url>
+	</snapshotRepository>
+	</distributionManagement>
 </project>
