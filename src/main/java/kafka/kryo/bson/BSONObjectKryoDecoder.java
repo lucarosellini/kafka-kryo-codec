@@ -9,6 +9,11 @@ import org.bson.BSONObject;
  * Created by luca on 6/11/14.
  */
 public class BSONObjectKryoDecoder extends KryoDecoder<BSONObject>{
+    @Override
+    protected Class<BSONObject> getRegisteredClass() {
+        return BSONObject.class;
+    }
+
     public BSONObjectKryoDecoder(VerifiableProperties props) {
         super(props);
     }
