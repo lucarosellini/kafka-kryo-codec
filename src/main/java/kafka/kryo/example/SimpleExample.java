@@ -1,4 +1,5 @@
 package kafka.kryo.example;
+
 import kafka.api.FetchRequest;
 import kafka.api.FetchRequestBuilder;
 import kafka.api.PartitionOffsetRequestInfo;
@@ -7,7 +8,7 @@ import kafka.common.TopicAndPartition;
 import kafka.javaapi.*;
 import kafka.javaapi.consumer.SimpleConsumer;
 import kafka.message.MessageAndOffset;
- 
+
 import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.HashMap;

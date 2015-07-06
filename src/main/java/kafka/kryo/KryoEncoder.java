@@ -1,23 +1,21 @@
 package kafka.kryo;
 
-import java.io.ByteArrayOutputStream;
-import java.lang.reflect.ParameterizedType;
-import java.lang.reflect.Type;
-
 import com.esotericsoftware.kryo.Kryo;
 import com.esotericsoftware.kryo.io.Output;
 import kafka.utils.VerifiableProperties;
 
-public class KryoEncoder<T> extends Kryo implements kafka.serializer.Encoder<T> {
+import java.io.ByteArrayOutputStream;
+
+public abstract class KryoEncoder<T> extends Kryo implements kafka.serializer.Encoder<T> {
+
+	protected abstract Class<T> getRegisteredClass();
 
     public KryoEncoder(VerifiableProperties props){
     }
 
 	@SuppressWarnings("unchecked")
 	public KryoEncoder() {
-		Type type = getClass().getGenericSuperclass();
-		Type[] trueType = ((ParameterizedType) type).getActualTypeArguments();
-		super.register((Class<T>) trueType[0]);
+		super.register(getRegisteredClass());
 	}
 
 	@Override

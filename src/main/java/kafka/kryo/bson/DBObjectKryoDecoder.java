@@ -8,6 +8,11 @@ import kafka.utils.VerifiableProperties;
  * Created by luca on 6/11/14.
  */
 public class DBObjectKryoDecoder extends KryoDecoder<DBObject>{
+    @Override
+    protected Class<DBObject> getRegisteredClass() {
+        return DBObject.class;
+    }
+
     public DBObjectKryoDecoder(VerifiableProperties props) {
         super(props);
     }
