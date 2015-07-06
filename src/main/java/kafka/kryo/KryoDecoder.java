@@ -1,16 +1,10 @@
 package kafka.kryo;
 
-import java.io.ByteArrayInputStream;
-
 import com.esotericsoftware.kryo.Kryo;
 import com.esotericsoftware.kryo.io.Input;
-
-import java.lang.reflect.ParameterizedType;
-import java.lang.reflect.Type;
-import java.util.Map;
-
-import kafka.kryo.example.Person;
 import kafka.utils.VerifiableProperties;
+
+import java.io.ByteArrayInputStream;
 
 public abstract class KryoDecoder<T> extends Kryo implements kafka.serializer.Decoder<T> {
 

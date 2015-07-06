@@ -1,6 +1,5 @@
 package kafka.kryo.bson;
 
-import com.mongodb.DBObject;
 import kafka.kryo.KryoEncoder;
 import kafka.utils.VerifiableProperties;
 import org.bson.BSONObject;

@@ -3,7 +3,6 @@ package kafka.kryo;
 import kafka.utils.VerifiableProperties;
 
 import java.util.Map;
-import java.util.TreeMap;
 
 /**
  * Created by Luca Rosellini.

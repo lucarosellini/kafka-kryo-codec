@@ -1,12 +1,5 @@
 package kafka.kryo.example;
 
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Properties;
-import java.util.Random;
-
 import kafka.consumer.ConsumerConfig;
 import kafka.consumer.ConsumerIterator;
 import kafka.consumer.KafkaStream;
@@ -15,6 +8,8 @@ import kafka.javaapi.producer.Producer;
 import kafka.message.MessageAndMetadata;
 import kafka.producer.KeyedMessage;
 import kafka.producer.ProducerConfig;
+
+import java.util.*;
 
 public class PutGet {
 	final static String TOPIC = "xxxxx";

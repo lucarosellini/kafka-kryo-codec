@@ -1,10 +1,10 @@
 package kafka.kryo;
 
-import java.io.ByteArrayOutputStream;
-
 import com.esotericsoftware.kryo.Kryo;
 import com.esotericsoftware.kryo.io.Output;
 import kafka.utils.VerifiableProperties;
+
+import java.io.ByteArrayOutputStream;
 
 public abstract class KryoEncoder<T> extends Kryo implements kafka.serializer.Encoder<T> {
 
