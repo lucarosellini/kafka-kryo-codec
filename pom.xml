@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.github.lucarosellini</groupId>
 	<artifactId>kafka.kryo.codec</artifactId>
-	<version>1.0.7-SNAPSHOT</version>
+	<version>1.0.7</version>
 	<name>kafka.kryo.codec</name>
 	<description>kafka.kryo.codec</description>
 
